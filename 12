@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+clear
+echo ""
+ls -lh --color ~/.virtualenvs/ansible
+echo ""
+tree -L 1 ~/.virtualenvs/ansible-*
+echo ""

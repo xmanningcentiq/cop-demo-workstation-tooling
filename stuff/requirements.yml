@@ -1,0 +1,6 @@
+---
+
+- name: xanmanning.controller
+- name: xanmanning.terraform
+- name: xanmanning.molecule
+- name: xanmanning.azurecli

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+readonly red="$(tput setaf 1)$(tput bold)"
+readonly green="$(tput setaf 2)$(tput bold)"
+readonly blue="$(tput setaf 6)$(tput bold)"
+readonly purple="$(tput setaf 5)$(tput bold)"
+readonly reset="$(tput sgr0)"
+
+clear
+echo "[${USER}@$(hostname) $(basename $(pwd))]$ ls -lh --color ${green}$(command -v terraform)${reset}*"
+echo ""
+ls -lh --color $(command -v terraform)*
+echo ""

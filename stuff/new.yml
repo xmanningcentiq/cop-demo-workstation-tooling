@@ -1,0 +1,14 @@
+---
+
+- name: Set packages to be latest and greatest (ish)
+  hosts: workstation
+  vars:
+    controller_ansible_version: 2.9.10
+    terraform_version: 0.12.28
+    molecule_version: 3.0.4
+    azcli_version: 2.8.0
+  roles:
+    - xanmanning.controller
+    - xanmanning.terraform
+    - xanmanning.molecule
+    - xanmanning.azurecli

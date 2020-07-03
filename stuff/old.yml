@@ -1,0 +1,14 @@
+---
+
+- name: Set packages to be older
+  hosts: workstation
+  vars:
+    controller_ansible_version: 2.8.6
+    terraform_version: 0.11.8
+    molecule_version: 2.22.0
+    azcli_version: 2.5.0
+  roles:
+    - xanmanning.controller
+    - xanmanning.terraform
+    - xanmanning.molecule
+    - xanmanning.azurecli
