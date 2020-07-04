@@ -5,7 +5,8 @@ source stuff/colours.sh
 
 clear
 echo ""
-ls -lh --color ~/.virtualenvs/ansible
+figlet "  CoP Demo!" | lolcat
 echo ""
-tree -L 1 ~/.virtualenvs/ansible-*
+echo "       Xan's Workstation setup with Ansible!"
+echo ""
 echo ""

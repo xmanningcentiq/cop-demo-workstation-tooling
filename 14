@@ -3,6 +3,8 @@ set -euo pipefail
 
 clear
 echo ""
-echo "THANK YOU!"
-export slide=0
+figlet "  THANK YOU!" | lolcat
+echo ""
+echo "    Any Questions?"
+echo ""
 echo ""
