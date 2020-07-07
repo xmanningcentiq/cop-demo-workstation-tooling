@@ -1,9 +1,20 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+__FIGLET="$(command -v figlet || true)"
+__LOLCAT="$(command -v lolcat || true)"
+
 clear
 echo ""
-figlet "  THANK YOU!" | lolcat
+if [[ "${__FIGLET}" == "" ]] ; then
+  echo "  THANK YOU!"
+else
+  if [[ "${__LOLCAT}" == "" ]] ; then
+    figlet "  THANK YOU!"
+  else
+    figlet "  THANK YOU!" | lolcat
+  fi
+fi
 echo ""
 echo "    Any Questions?"
 echo ""

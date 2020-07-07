@@ -3,10 +3,21 @@ set -euo pipefail
 
 source stuff/colours.sh
 
+__FIGLET="$(command -v figlet || true)"
+__LOLCAT="$(command -v lolcat || true)"
+
 clear
 echo ""
-figlet "  CoP Demo!" | lolcat
+if [[ "${__FIGLET}" == "" ]] ; then
+  echo "  CoP Demo!"
+else
+  if [[ "${__LOLCAT}" == "" ]] ; then
+    figlet "  CoP Demo!"
+  else
+    figlet "  CoP Demo!" | lolcat
+  fi
+fi
 echo ""
-echo "       Xan's Workstation setup with Ansible!"
+echo "     Workstation tooling with Ansible and venv!"
 echo ""
 echo ""
